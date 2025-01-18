@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="MUHAMMAD ZIKRI BIN KASHIM" />
+    <title> ZK | Everything About Me </title>
+
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/image/favicon.ico" />
+    <!-- Custom Google font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter">
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+    <style>
+        .aboutme {
+            width: 100%;
+            height: 100%;
+            /* Optional, to fill both width and height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            /* To ensure no overflow from the image */
+        }
+
+        .aboutme-img {
+            width: 100%;
+            height: auto;
+            /* Maintains the aspect ratio */
+            object-fit: cover;
+            /* Ensures the image fills the container nicely */
+        }
+
+        /* Animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1.2s ease-in-out;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Card Hover Effects */
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        /* Button Hover Animation */
+        .btn:hover {
+            animation: bounce 0.3s;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Section-Specific Styles */
+        .skills-section {
+            background-color: #f8f9fa;
+            padding: 3rem 1rem;
+            border-radius: 10px;
+        }
+
+        .skills-section .feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skills-section h3 {
+            color: #343a40;
+            font-weight: bold;
+        }
+
+        .skills-section .skill-card {
+            background-color: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skills-section .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .skills-section .icon-container {
+            font-size: 2rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        #achievements {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+        }
+
+        .achievement-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .achievement-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-card h6 {
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-card p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+
+
+        .achievement-card .bg-light {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #achievements h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .btn-primary svg {
+            margin-left: 5px;
+        }
+    </style>
+
+</head>
+
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+
+        <!-- Navigation Start-->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 shadow shadow-sm sticky-top">
+            <div class="container px-5">
+                <a class="navbar-brand" href="index.html"><img src="assets/image/banner-2.png" width="150" height="100"
+                        alt="logo" class="img-fluid"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link text-dark fw-normal fs-6" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-primary fw-semibold fs-6 active"
+                                href="about.html">About
+                            </a></li>
+                        <li class="nav-item"><a class="nav-link text-dark fw-normal fs-6"
+                                href="education.html">Education
+                            </a></li>
+                        <li class="nav-item"><a class="nav-link text-dark fw-normal fs-6"
+                                href="experience.html">Experience
+                            </a></li>
+                        <li class="nav-item"><a class="nav-link text-dark fw-normal fs-6" href="skills.html">Skill
+                                & Quality
+                            </a></li>
+                        <li class="nav-item"><a class="nav-link text-dark fw-normal fs-6"
+                                href="achievement.html">Achievement
+                            </a></li>
+                        <li class="nav-item"><a class="nav-link text-dark fw-normal fs-6" href="projects.html">
+                                Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navigation End-->
+
+        <!-- Page Content Start -->
+
+        <div class="container px-5 pb-5 my-5" id="aboutme">
+            <div class="row gx-5 align-items-center">
+                <div class="col-xxl-4">
+                    <!-- <div class="d-flex justify-content-center mt-5 mt-xxl-0"> -->
+                    <div class="aboutme shadow shadow-md animate__animated animate__fadeInLeft">
+                        <img class="aboutme-img rounded" src="assets/image/zikri_2.jpg" alt="..." />
+                        <!-- </div> -->
+                    </div>
+                </div>
+                <div class="col-xxl-8 py-5 px-5">
+                    <!-- About Section Start-->
+                    <div class="ms-md-5 ms-sm-0">
+                        <h2 class="display-6 fw-bolder mb-4">
+                            <span class="text-dark">
+                                About
+                            </span>
+                            <span class="text-primary ">
+                                Me
+                            </span>
+                        </h2>
+                        <p class="text-muted fw-light mb-4 animate__animated animate__fadeInUp">
+                            Hey there, I'm Muhammad Zikri Kashim, currently advancing my expertise in Software
+                            Development at Universiti Teknikal Malaysia Melaka (UTeM).
+                        </p>
+                        <p class="text-muted fw-light mb-4 animate__animated animate__fadeInUp">
+                            Armed with a <span class="fw-semibold">Diploma in Information Technology</span> and now
+                            pursuing my Degree, I thrive in the
+                            world of programming languages including <span class="fw-semibold">Java, HTML, CSS, PHP, C#,
+                                and C++</span>. My forte?
+                            Building robust applications with <span class="fw-semibold">Laravel Framework</span>, where
+                            I feel most at home.
+                        </p>
+                        <p class="text-muted fw-light mb-5 animate__animated animate__fadeInUp">
+                            Known for my logical approach to problem-solving and knack for leadership, I am committed to
+                            delivering solutions that matter. Whether it's crafting elegant code or guiding teams toward
+                            success, I'm all about making an impact.
+                        </p>
+
+                        <div
+                            class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3 animate__animated animate__fadeInLeft">
+                            <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder explore-btn"
+                                href="education.html">
+                                Explore My Education
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M5 12l14 0" />
+                                    <path d="M13 18l6 -6" />
+                                    <path d="M13 6l6 6" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- About Section End-->
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Content End -->
+    </main>
+
+    <!-- Footer Start-->
+    <footer class="bg-light py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto">
+                    <div class="small m-0 text-muted">&copy; 2024 Muhammad Zikri Kashim. All rights reserved.</div>
+                </div>
+                <div class="col-auto">
+                    <div class="d-flex justify-content-start fs-2 gap-4">
+                        <a class="text-muted" href="https://x.com/zeekezik?s=21&t=3yF8EWzCsUUCAcyxfPTpaw"
+                            target="_blank"><i class="bi bi-twitter"></i></a>
+                        <a class="text-muted" href="https://www.linkedin.com/in/zikrikashim/" target="_blank"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a class="text-muted" href="https://github.com/zikrimzk" target="_blank"><i
+                                class="bi bi-github"></i></a>
+                        <a class="text-muted"
+                            href="https://www.instagram.com/zikrimzk/profilecard/?igsh=MW04NHlsc3psaHpmeQ=="
+                            target="_blank"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End-->
+
+    <script>
+        // Intersection Observer for fade-in animation
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        // Attach observer to all elements with fade-in-up class
+        document.querySelectorAll('.fade-in-up').forEach(element => {
+            observer.observe(element);
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start',
+                    });
+                }
+            });
+        });
+    </script>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

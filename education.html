@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="MUHAMMAD ZIKRI BIN KASHIM" />
+    <title> ZK | Everything About Me </title>
+
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/image/favicon.ico" />
+    <!-- Custom Google font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter">
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+    <style>
+        .aboutme {
+            width: 100%;
+            height: 100%;
+            /* Optional, to fill both width and height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            /* To ensure no overflow from the image */
+        }
+
+        .aboutme-img {
+            width: 100%;
+            height: auto;
+            /* Maintains the aspect ratio */
+            object-fit: cover;
+            /* Ensures the image fills the container nicely */
+        }
+
+        /* Animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1.2s ease-in-out;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Card Hover Effects */
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        /* Button Hover Animation */
+        .btn:hover {
+            animation: bounce 0.3s;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Section-Specific Styles */
+        .skills-section {
+            background-color: #f8f9fa;
+            padding: 3rem 1rem;
+            border-radius: 10px;
+        }
+
+        .skills-section .feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skills-section h3 {
+            color: #343a40;
+            font-weight: bold;
+        }
+
+        .skills-section .skill-card {
+            background-color: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skills-section .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .skills-section .icon-container {
+            font-size: 2rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        #achievements {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+        }
+
+        .achievement-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .achievement-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-card h6 {
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-card p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+
+
+        .achievement-card .bg-light {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #achievements h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .btn-primary svg {
+            margin-left: 5px;
+        }
+    </style>
+
+</head>
+
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+
+        <!-- Navigation Start-->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 shadow shadow-sm sticky-top">
+            <div class="container px-5">
+                <a class="navbar-brand" href="index.html"><img src="assets/image/banner-2.png" width="150" height="100"
+                        alt="logo" class="img-fluid"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link text-dark fw-normal fs-6" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-dark fw-normal fs-6" href="about.html">About
+                            </a></li>
+                        <li class="nav-item"><a class="nav-link  text-primary fw-semibold fs-6 active"
+                                href="education.html">Education
+                            </a></li>
+                        <li class="nav-item"><a class="nav-link text-dark fw-normal fs-6"
+                                href="experience.html">Experience
+                            </a></li>
+                        <li class="nav-item"><a class="nav-link text-dark fw-normal fs-6" href="skills.html">Skill
+                                & Quality
+                            </a></li>
+                        <li class="nav-item"><a class="nav-link text-dark fw-normal fs-6"
+                                href="achievement.html">Achievement
+                            </a></li>
+                        <li class="nav-item"><a class="nav-link text-dark fw-normal fs-6 " href="projects.html">
+                                Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navigation End-->
+
+        <!-- Page Content Start -->
+
+        <div class="container px-5 my-5" id="academic">
+            <div class="row gx-5 justify-content-center align-items-center">
+                <div class="col-sm-12">
+                    <div class="text-center mb-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-school">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
+                            <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
+                        </svg>
+                        <h1 class="display-5 fw-bolder mb-0">
+                            <span class="text-primary">My</span> <span class="text-dark">Academic</span>
+                        </h1>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <!-- Education Section -->
+                    <section>
+                        <!-- Education Cards 1 -->
+                        <div class="card shadow border-0 rounded-4 mb-5 fade-in-up">
+                            <div class="card-body p-5">
+                                <div class="row align-items-center gx-5">
+                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-4">
+                                            <img src="assets/image/utem-logo.png" class="img-fluid mb-3" width="100"
+                                                alt="utem-logo">
+                                            <div class="text-primary fw-bolder mb-2">2024 - Present</div>
+                                            <div class="mb-2">
+                                                <div class="small fw-bolder">University Teknikal Malaysia Melaka (UTeM)
+                                                </div>
+                                                <div class="small text-muted">Melaka</div>
+                                            </div>
+                                            <div class="fst-italic">
+                                                <div class="small text-muted">Bachelors Degree</div>
+                                                <div class="small text-muted">Computer Science (Software Development)
+                                                </div>
+                                                <div class="small text-muted">CGPA : 3.85</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div>
+                                            I am currently pursuing my <span class="fw-semibold">degree</span> studies,
+                                            building on my strong foundation from my diploma journey. My dedication to
+                                            academic excellence continues, as evidenced by achieving the Dean's List in
+                                            my first semester. I am committed to further honing my skills and knowledge,
+                                            striving for continued success throughout my degree program.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Education Card 2-->
+                        <div class="card shadow border-0 rounded-4 mb-5 fade-in-up">
+                            <div class="card-body p-5">
+                                <div class="row align-items-center gx-5">
+                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-4">
+                                            <img src="assets/image/utem-logo.png" class="img-fluid mb-3" width="100"
+                                                alt="utem-logo">
+
+                                            <div class="text-primary fw-bolder mb-2">2021 - 2024</div>
+                                            <div class="mb-2">
+                                                <div class="small fw-bolder">University Teknikal Malaysia Melaka (UTeM)
+                                                </div>
+                                                <div class="small text-muted">Melaka</div>
+                                            </div>
+                                            <div class="fst-italic">
+                                                <div class="small text-muted">Diploma</div>
+                                                <div class="small text-muted">Information Technology & Comunication
+                                                </div>
+                                                <div class="small text-muted">CGPA : 3.78</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div>
+                                            During my <span class="fw-semibold">diploma</span> studies, I developed a
+                                            strong foundation in programming,
+                                            mastering languages such as C++, C#, Java, PHP, HTML, and more. I actively
+                                            engaged in programming-related events and competitions, including Code Hunt,
+                                            WorldSkills Belia 2023, and Service Learning Malaysia (SULAM).
+                                            My dedication to academics and passion for programming were reflected in my
+                                            consistent achievements, including earning the Dean's List for every
+                                            semester.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Education Card 3-->
+                        <div class="card shadow border-0 rounded-4 mb-5 fade-in-up">
+                            <div class="card-body p-5">
+                                <div class="row align-items-center gx-5">
+                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-4">
+                                            <img src="assets/image/munsgi-logo-two.JPG" class="img-fluid mb-3"
+                                                width="80" alt="utem-logo">
+
+                                            <div class="text-primary fw-bolder mb-2">2016 - 2020</div>
+                                            <div class="mb-2">
+                                                <div class="small fw-bolder">SMK Munshi Abdullah</div>
+                                                <div class="small text-muted">Melaka</div>
+                                            </div>
+                                            <div class="fst-italic">
+                                                <div class="small text-muted">Secondary School</div>
+                                                <div class="small text-muted">Sijil Pelajaran Malaysia (SPM)</div>
+                                                <div class="small text-muted">Grade : 5 A 2 A- 1 B</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div>
+                                            During my <span class="fw-semibold">secondary</span> school years, I was
+                                            assigned to the Accounting class,
+                                            where I focused on subjects such as Economics, Additional Mathematics, and
+                                            Accounting. Alongside these, I also built a strong foundation in other core
+                                            subjects, including Science, English, Bahasa Malaysia, and more.Beyond
+                                            academics, I actively participated in extracurricular activities such as
+                                            competing in a short video
+                                            competition, attending Joomla training for students, and serving as a
+                                            photographer during school events.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add more cards as needed -->
+                    </section>
+                </div>
+            </div>
+
+            <div
+                class="d-grid gap-3 d-md-flex justify-content-sm-center justify-content-xxl-between mb-3 animate__animated animate__fadeIn">
+                <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder explore-btn" href="about.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M5 12l14 0" />
+                        <path d="M5 12l6 6" />
+                        <path d="M5 12l6 -6" />
+                    </svg>
+                    Go Back to About Me
+                </a>
+
+                <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder explore-btn" href="experience.html">
+                    Explore My Experience
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M5 12l14 0" />
+                        <path d="M13 18l6 -6" />
+                        <path d="M13 6l6 6" />
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Page Content End -->
+    </main>
+
+    <!-- Footer Start-->
+    <footer class="bg-light py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto">
+                    <div class="small m-0 text-muted">&copy; 2024 Muhammad Zikri Kashim. All rights reserved.</div>
+                </div>
+                <div class="col-auto">
+                    <div class="d-flex justify-content-start fs-2 gap-4">
+                        <a class="text-muted" href="https://x.com/zeekezik?s=21&t=3yF8EWzCsUUCAcyxfPTpaw"
+                            target="_blank"><i class="bi bi-twitter"></i></a>
+                        <a class="text-muted" href="https://www.linkedin.com/in/zikrikashim/" target="_blank"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a class="text-muted" href="https://github.com/zikrimzk" target="_blank"><i
+                                class="bi bi-github"></i></a>
+                        <a class="text-muted"
+                            href="https://www.instagram.com/zikrimzk/profilecard/?igsh=MW04NHlsc3psaHpmeQ=="
+                            target="_blank"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End-->
+
+    <script>
+        // Intersection Observer for fade-in animation
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        // Attach observer to all elements with fade-in-up class
+        document.querySelectorAll('.fade-in-up').forEach(element => {
+            observer.observe(element);
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start',
+                    });
+                }
+            });
+        });
+    </script>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
